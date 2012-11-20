@@ -1,0 +1,129 @@
+/*reset begin*/
+p{margin:0;}
+/*reset end*/
+/*base begin*/
+body{
+	width: 1100px;
+	height: 700px;
+	margin: 0 auto;
+	font:normal 12px/.62 '微软雅黑';
+	background: url(../img/sea.jpg) bottom left repeat-x;
+}
+@font-face {
+    font-family: 'JournalRegular';
+    src: url('font/Journal-fontfacekit/journal-webfont.eot');
+    src: url('font/Journal-fontfacekit/journal-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/Journal-fontfacekit/journal-webfont.woff') format('woff'),
+         url('font/Journal-fontfacekit/journal-webfont.ttf') format('truetype'),
+         url('font/Journal-fontfacekit/journal-webfont.svg#JournalRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+.animated {
+	-webkit-animation-duration: 1s;
+	   -moz-animation-duration: 1s;
+	     -o-animation-duration: 1s;
+	        animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	   -moz-animation-fill-mode: both;
+	     -o-animation-fill-mode: both;
+	        animation-fill-mode: both;
+}
+@-webkit-keyframes tada {
+	0% {-webkit-transform: scale(1);}	
+	10%, 20% {-webkit-transform: scale(0.9) rotate(-3deg);}
+	30%, 50%, 70%, 90% {-webkit-transform: scale(1.1) rotate(3deg);}
+	40%, 60%, 80% {-webkit-transform: scale(1.1) rotate(-3deg);}
+	100% {-webkit-transform: scale(1) rotate(0);}
+}
+
+@-moz-keyframes tada {
+	0% {-moz-transform: scale(1);}	
+	10%, 20% {-moz-transform: scale(0.9) rotate(-3deg);}
+	30%, 50%, 70%, 90% {-moz-transform: scale(1.1) rotate(3deg);}
+	40%, 60%, 80% {-moz-transform: scale(1.1) rotate(-3deg);}
+	100% {-moz-transform: scale(1) rotate(0);}
+}
+
+@-o-keyframes tada {
+	0% {-o-transform: scale(1);}	
+	10%, 20% {-o-transform: scale(0.9) rotate(-3deg);}
+	30%, 50%, 70%, 90% {-o-transform: scale(1.1) rotate(3deg);}
+	40%, 60%, 80% {-o-transform: scale(1.1) rotate(-3deg);}
+	100% {-o-transform: scale(1) rotate(0);}
+}
+
+@keyframes tada {
+	0% {transform: scale(1);}	
+	10%, 20% {transform: scale(0.9) rotate(-3deg);}
+	30%, 50%, 70%, 90% {transform: scale(1.1) rotate(3deg);}
+	40%, 60%, 80% {transform: scale(1.1) rotate(-3deg);}
+	100% {transform: scale(1) rotate(0);}
+}
+@-webkit-keyframes fadeIn {
+	0% {text-shadow:#000 0px 0px 0px;}	
+	100% {text-shadow:#000 0px 0px 5px;}
+}
+
+@-moz-keyframes fadeIn {
+	0% {text-shadow:#000 0px 0px 0px;}	
+	100% {text-shadow:#000 0px 0px 5px;}
+}
+
+@-o-keyframes fadeIn {
+	0% {text-shadow:#000 0px 0px 0px;}	
+	100% {text-shadow:#000 0px 0px 5px;}
+}
+
+@keyframes fadeIn {
+	0% {text-shadow:#000 0px 0px 0px;}	
+	100% {text-shadow:#000 0px 0px 5px;}
+}
+
+
+/*base end*/
+
+/*page begin*/
+header{
+	margin-left: 50px;
+	font: 48px/48px JournalRegular, Helvetica, sans-serif;
+	color: #1e6ffa;
+	text-shadow: 3px 3px 10px #ABD3E8;
+}
+header h1{
+	width:300px;
+}
+header h1:hover {
+	-webkit-animation-name: tada;
+	-moz-animation-name: tada;
+	-o-animation-name: tada;
+	animation-name: tada;
+}
+.stage{
+	float:left;
+	width:520px;
+	height: 280px;
+	border: 1px solid rgba(30, 111, 250, 0.5);
+	border-radius: 5px;
+	background: #fff;
+}
+#stage_p2{
+	float:right;
+}
+footer{
+	position: fixed;
+	bottom: 0px;
+	right: 50px;
+	padding: 0px 150px;
+	border-radius: 5px;
+	background: white;
+	font: 30px/1.6 JournalRegular, Helvetica, sans-serif;
+}
+footer p:hover{
+	-webkit-animation-name: fadeIn;
+	-moz-animation-name: fadeIn;
+	-o-animation-name: fadeIn;
+	animation-name: fadeIn;
+}
+/*page end*/
