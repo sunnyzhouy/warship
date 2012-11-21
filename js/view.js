@@ -120,4 +120,7 @@ View.prototype = {
 	_saveStage : function( layer, stage ){
 		stage.add( layer );
 	}
+	/**
+	 *github commit test 
+	 */
 }
