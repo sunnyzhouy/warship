@@ -123,4 +123,7 @@ View.prototype = {
 	/**
 	 *github commit test 
 	 */
+	/**
+	 *github commit test 2
+	 */
 }
