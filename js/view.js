@@ -95,7 +95,7 @@ View.prototype = {
 			imgObj.src = src;
 		}
 	},
-	
+	 
 	/**
 	 * 绘制炸弹 
 	 */
