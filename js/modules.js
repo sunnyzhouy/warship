@@ -134,6 +134,9 @@ Ship.prototype = {
 		var c = this.config;
 		return c.assetDir + c.name + '.' + c.imgType;
 	},
+	getName : function(){
+		return this.config.name;
+	},
 	getWidth:function(){
 		return this.config.width;
 	},

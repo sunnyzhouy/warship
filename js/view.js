@@ -67,35 +67,13 @@ View.prototype = {
 	 */
 	drawShip : function( player ) {
 		var c = this.config,
-			viewInstance = this,
 			stage = this.stage,
-			layer = new Kinetic.Layer(),
-			ships = this.ships,
-			ship,
-			shipImg,
-			src, 
-			pos,
-			imgObj;
+			ships = this.ships;
 		for( var i = 0, l = ships.length; i < l; i ++ ){
-			ship = ships[i];
-			src = ship.getSrc(),
-			pos = ship.getPos(),
-			draggable = ship.getDraggable();
-			imgObj = new Image();
-			imgObj.onload = function(){
-				shipImg = new Kinetic.Image({
-					image: src,
-					x: pos.left,
-					y: pos.top,
-					draggable: draggable
-				});
-				viewInstance._saveShape(shipImg,layer);
-				viewInstance._saveStage(layer,stage);
-			}
-			imgObj.src = src;
+			this._loadImg(ships[i],stage,this);
 		}
 	},
-	 
+	
 	/**
 	 * 绘制炸弹 
 	 */
@@ -106,6 +84,32 @@ View.prototype = {
 	 * 显示提示信息 
 	 */
 	showMsg:function( msg, containerElement ){
+		
+	},
+	/**
+	 * 根据提供的图片路径加载图片
+	 */
+	_loadImg : function( ship, stage, view ){
+			var pos = ship.getPos(),
+			src = ship.getSrc(),
+			draggable = ship.getDraggable();
+			imgObj = new Image();
+		
+		imgObj.src = src;
+		imgObj.onload = function(){
+			var layer = new Kinetic.Layer(),
+			shipImg = new Kinetic.Image({
+				image: src,
+				x: pos.left,
+				y: pos.top,
+				width:100,
+				height:100,
+				name:'image',
+				draggable: draggable
+			});
+			view._saveShape(shipImg,layer);
+			view._saveStage(layer,stage);
+		}
 		
 	},
 	/*
